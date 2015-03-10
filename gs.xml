@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fernml version="1.0">
+  <listOfSpecies>
+    <species initialAmount="60" name="A"/>
+    <species initialAmount="0" name="A0"/>
+    <species initialAmount="1" name="A1"/>
+    <species initialAmount="0" name="B"/>
+    <species initialAmount="1" name="B0"/>
+    <species initialAmount="0" name="B1"/>
+    <species initialAmount="0" name="R"/>
+ <species initialAmount="0" name="pool"/>
+  </listOfSpecies>
+  <listOfReactions>
+  <reaction kineticConstant="0.01">
+      <listOfReactants>
+        <speciesReference name="A1" />
+	<speciesReference name="B" />
+	<speciesReference name="B"/>
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference name="A0" />
+      </listOfProducts>
+    </reaction>
+    <reaction kineticConstant="1.0">
+      <listOfReactants>
+        <speciesReference name="A0" />
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference name="A1" />
+	<speciesReference name="B" />
+	<speciesReference name="B" />
+      </listOfProducts>
+    </reaction>
+    <reaction kineticConstant="0.01">
+      <listOfReactants>
+        <speciesReference name="B1" />
+	<speciesReference name="A" />
+	<speciesReference name="A"/>
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference name="B0" />
+      </listOfProducts>
+    </reaction>
+    <reaction kineticConstant="1.0">
+      <listOfReactants>
+        <speciesReference name="B0" />
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference name="B1" />
+	<speciesReference name="A" />
+	<speciesReference name="A"/>
+      </listOfProducts>
+    </reaction>
+    <reaction kineticConstant="80.0">
+      <listOfReactants>
+        <speciesReference name="A1" />
+      </listOfReactants>
+      <listOfProducts>
+      	<speciesReference name="A1"/>
+        <speciesReference name="A" />
+      </listOfProducts>
+    </reaction>	
+    <reaction kineticConstant="80.0">
+      <listOfReactants>
+        <speciesReference name="B1" />
+      </listOfReactants>
+      <listOfProducts>
+      	<speciesReference name ="B1"/>
+        <speciesReference name="B" />
+      </listOfProducts>
+    </reaction>
+<reaction kineticConstant="1.0">
+<listOfReactants>
+        <speciesReference name="A" />
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference name="pool" />
+      </listOfProducts>
+    </reaction>
+<reaction kineticConstant="1.0">
+<listOfReactants>
+        <speciesReference name="B" />
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference name="pool" />
+      </listOfProducts>
+    </reaction>
+<reaction kineticConstant="1.0">
+<listOfReactants>
+        <speciesReference name="R" />
+      </listOfReactants>
+      <listOfProducts>
+	<speciesReference name="pool" />
+      </listOfProducts>
+    </reaction>
+<reaction kineticConstant="0.01">
+<listOfReactants>
+        <speciesReference name="A" />
+	<speciesReference name="R"/>
+      </listOfReactants>
+      <listOfProducts>
+        <speciesReference name="R" />
+      </listOfProducts>
+    </reaction>
+  </listOfReactions>
+</fernml>
